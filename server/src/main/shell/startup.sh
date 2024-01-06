@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -z "$FS_HOME" ]; then
-  export FS_HOME=/opt/flyingsocks-server
+  export FS_HOME=/home/ubuntu/workdir/flyingsocks-server
 fi
 
 
