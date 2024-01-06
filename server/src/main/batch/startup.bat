@@ -2,9 +2,9 @@
 title "flyingsocks Server"
 
 if "%1%" == "-t" (
-    java -server -Xbootclasspath/a:../conf;../ -cp ../lib/flyingsocks-server-3.0-SNAPSHOT.jar
+    java -server -Dflyingsocks.config.location=../config -Xbootclasspath/a:../config:../ -cp ../lib/* com.lzf.flyingsocks.server.ServerBoot
 ) else (
-    start /b java -server -Xbootclasspath/a:../conf;../ -cp ../lib/flyingsocks-server-3.0-SNAPSHOT.jar
+    start /b java -Dflyingsocks.config.location=../config -Xbootclasspath/a:../config:../ -cp ../lib/* com.lzf.flyingsocks.server.ServerBoot
 )
 echo "Complete."
 pause
